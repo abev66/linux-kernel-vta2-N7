@@ -65,7 +65,7 @@
 
 /* Debug Message */
 #define BAT_NOTICE(format, arg...)	\
-	printk(KERN_NOTICE "%s " format , __FUNCTION__ , ## arg)
+	pr_debug(KERN_NOTICE "%s " format , __FUNCTION__ , ## arg)
 
 #define BAT_ERR(format, arg...)		\
 	printk(KERN_ERR format , ## arg)
