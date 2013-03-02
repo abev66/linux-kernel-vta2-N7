@@ -99,7 +99,7 @@ static unsigned long above_hispeed_delay_val = DEFAULT_ABOVE_HISPEED_DELAY;
 /*
  * Boost pulse to hispeed on touchscreen input.
  */
-static int input_boost_val;
+static int input_boost_val = 1;
 
 struct cpufreq_interactive_inputopen {
 	struct input_handle *handle;
@@ -110,7 +110,7 @@ static struct cpufreq_interactive_inputopen inputopen;
 static struct workqueue_struct *inputopen_wq;
 
 /* Non-zero means indefinite speed boost active */
-static int boost_val;
+static int boost_val = 1;
 /* Duration of a boot pulse in usecs */
 static int boostpulse_duration_val = DEFAULT_MIN_SAMPLE_TIME;
 /* End time of boost pulse in ktime converted to usecs */
