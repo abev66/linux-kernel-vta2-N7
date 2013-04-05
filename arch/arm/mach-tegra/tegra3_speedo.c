@@ -236,7 +236,7 @@ static void rev_sku_to_speedo_ids(int rev, int sku)
 #ifdef CONFIG_TEGRA_CPU_OVERCLOCK
 			/* fake it to behave as AP33 variant */
 				cpu_speedo_id = 4;
-				soc_speedo_id = 1;
+				soc_speedo_id = 2;
 				threshold_index = 7;
 #else
 				cpu_speedo_id = 7;
