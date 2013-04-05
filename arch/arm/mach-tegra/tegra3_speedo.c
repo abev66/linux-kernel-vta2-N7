@@ -460,7 +460,7 @@ void tegra_init_speedo_data(void)
 		}
 	}
 #if CONFIG_TEGRA_CPU_OVERCLOCK
-	core_process_id = 1; /* fake it to behave as AP33 core variant 1 */
+	core_process_id = 2; /* fake it to behave as AP33 core variant 1 */
 #else
 	core_process_id = iv -1;
 #endif
