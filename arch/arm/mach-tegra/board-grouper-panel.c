@@ -164,7 +164,7 @@ static int grouper_disp1_check_fb(struct device *dev, struct fb_info *info);
 static struct platform_pwm_backlight_data grouper_backlight_data = {
 	.pwm_id		= 0,
 	.max_brightness	= 255,
-	.dft_brightness	= 40,
+	.dft_brightness	= 30,
 	.pwm_period_ns	= 50000,
 	.init		= grouper_backlight_init,
 	.exit		= grouper_backlight_exit,
@@ -410,7 +410,7 @@ static struct tegra_dc_sd_settings grouper_sd_settings = {
 	.bin_width = -1,
 	.aggressiveness = 1,
 	.phase_in_adjustments = true,
-	.panel_min_brightness = 13,
+	.panel_min_brightness = 8,
 	.use_vid_luma = false,
 	/* Default video coefficients */
 	.coeff = {5, 9, 2},
