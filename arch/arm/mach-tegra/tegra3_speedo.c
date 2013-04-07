@@ -234,10 +234,10 @@ static void rev_sku_to_speedo_ids(int rev, int sku)
 			switch (package_id) {
 			case 1: /* MID => T30L */
 #ifdef CONFIG_TEGRA_CPU_OVERCLOCK
-			/* fake it to behave as AP33 variant */
-				cpu_speedo_id = 4;
+			/* fake it to behave as AP37 variant */
+				cpu_speedo_id = 12;
 				soc_speedo_id = 2;
-				threshold_index = 7;
+				threshold_index = 9;
 #else
 				cpu_speedo_id = 7;
 				soc_speedo_id = 1;
