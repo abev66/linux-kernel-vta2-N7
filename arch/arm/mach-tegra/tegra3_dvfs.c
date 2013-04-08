@@ -284,7 +284,7 @@ static struct dvfs core_dvfs_table[] = {
 	CORE_DVFS("cbus",   2, 1, KHZ,        1, 247000, 304000, 352000, 400000,  437000,  484000,  520000,  600000),
 	CORE_DVFS("cbus",   3, 1, KHZ,        1, 484000, 484000, 484000, 484000,  484000,  484000,  484000,  484000),
 
-	CORE_DVFS("pll_c",  -1, 1, KHZ,  667000, 800000, 800000, 1066000, 1066000, 1066000, 1066000, 1066000, 1200000),
+	CORE_DVFS("pll_c",  -1, 1, KHZ,  667000, 800000, 800000, 1200000, 1200000, 1200000, 1200000, 1200000, 1200000),
 
 	/*
 	 * PLLM dvfs is common across all speedo IDs with one special exception
@@ -292,9 +292,9 @@ static struct dvfs core_dvfs_table[] = {
 	 * common and restricted table are included, and table selection is
 	 * handled by is_pllm_dvfs() below.
 	 */
-	CORE_DVFS("pll_m",  -1, 1, KHZ,  667000, 800000, 800000, 1066000, 1066000, 1066000, 1066000, 1066000, 1066000),
+	CORE_DVFS("pll_m",  -1, 1, KHZ,  667000, 800000, 800000, 1200000, 1200000, 1200000, 1200000, 1200000, 1200000),
 #ifdef CONFIG_TEGRA_PLLM_RESTRICTED
-	CORE_DVFS("pll_m",   2, 1, KHZ,  533000, 800000, 800000, 800000, 800000, 1066000, 1066000, 1066000, 1066000),
+	CORE_DVFS("pll_m",   2, 1, KHZ,  533000, 800000, 800000, 800000, 800000, 1200000, 1200000, 1200000, 1200000),
 #endif
 	/* Core voltages (mV):		    950,   1000,   1050,   1100,   1150,   1200,    1250,     1300,    1350 */
 	/* Clock limits for I/O peripherals */
