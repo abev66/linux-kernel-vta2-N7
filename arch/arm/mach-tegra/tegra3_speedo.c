@@ -235,9 +235,9 @@ static void rev_sku_to_speedo_ids(int rev, int sku)
 			case 1: /* MID => T30L */
 #ifdef CONFIG_TEGRA_CPU_OVERCLOCK
 			/* fake it to behave as AP37 variant */
-				cpu_speedo_id = 12;
+				cpu_speedo_id = 4;
 				soc_speedo_id = 2;
-				threshold_index = 9;
+				threshold_index = 7;
 #else
 				cpu_speedo_id = 7;
 				soc_speedo_id = 1;
@@ -436,7 +436,7 @@ void tegra_init_speedo_data(void)
 		}
 	}
 #if CONFIG_TEGRA_CPU_OVERCLOCK
-	cpu_process_id = 3; /* fake it to behave as AP33 cpu variant 3 */
+	cpu_process_id = 2; /* fake it to behave as AP33 cpu variant 3 */
 #else
 	cpu_process_id = iv -1;
 #endif
