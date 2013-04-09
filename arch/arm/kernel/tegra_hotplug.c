@@ -14,8 +14,8 @@
 #include <linux/timer.h>
 #include <linux/earlysuspend.h>
 
-/* threshold for comparing time diffs is 2 seconds */
-#define SEC_THRESHOLD 2000
+/* threshold for comparing time diffs is 0.75 seconds */
+#define SEC_THRESHOLD 750
 
 #define DEFAULT_FIRST_LEVEL 90
 unsigned int default_first_level;
