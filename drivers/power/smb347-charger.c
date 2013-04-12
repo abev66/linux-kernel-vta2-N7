@@ -1100,10 +1100,10 @@ static int cable_type_detect(void)
 						printk(KERN_INFO "Cable: OTHER\n");
 					} else if (retval == APSD_SDP) {
 						printk(KERN_INFO "Cable: SDP\n");
-						charger->cur_cable_type = ac_cable;
-						success = battery_callback(ac_cable);
+						charger->cur_cable_type = usb_cable;
+						success = battery_callback(usb_cable);
 #ifdef TOUCH_CALLBACK_ENABLED
-	                                    touch_callback(ac_cable);
+	                                    touch_callback(usb_cable);
 #endif
 					} else if(retval == APSD_HOST_MODE_CHARGING) {	// tmtmtm
 
@@ -1128,8 +1128,8 @@ static int cable_type_detect(void)
 						charger->cur_cable_type = unknow_cable;
 						printk(KERN_INFO "Unkown Plug In Cable type !\n");
 						if (gpio_get_value(dock_in)) {
-							charger->cur_cable_type = ac_cable;
-							success = battery_callback(ac_cable);
+							charger->cur_cable_type = usb_cable;
+							success = battery_callback(usb_cable);
 						}
 					}
 				} else {
